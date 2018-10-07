@@ -25,7 +25,7 @@ SECRET_KEY = 'e_mdr5)s^7^7e(2lr$%i$7qb%4xygcmhb@lonxwmc4ul9or6ar'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".chefin.com"]
 
 
 # Application definition
@@ -142,3 +142,28 @@ REST_FRAMEWORK = {
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'app.views.auth.jwt_response_payload_handler',
 }
+
+from django.apps import config
+import dj_database_url
+
+# SECRET_KEY = config('SECRET_KEY')
+# DEBUG = config('DEBUG', default=False, cast=bool)
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
+
+db_from_env = dj_database_url.config(conn_max_age=None)
+DATABASES['default'].update(db_from_env)
+
+STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
