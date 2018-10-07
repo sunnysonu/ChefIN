@@ -1,1 +1,1 @@
-web: gunicorn chefin.wsgi --log-file -
+web: gunicorn ChefIN.wsgi --log-file -

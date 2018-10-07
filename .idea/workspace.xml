@@ -79,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/ChefIN/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
-              <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="21" />
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="22" />
               <folding>
                 <element signature="e#222#231#0" expanded="true" />
               </folding>
@@ -197,6 +197,11 @@
             <path>
               <item name="ChefIN" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChefIN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChefIN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChefIN" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChefIN" type="b2602c69:ProjectViewProjectNode" />
@@ -672,7 +677,7 @@
     <entry file="file://$PROJECT_DIR$/ChefIN/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="21" />
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="22" />
           <folding>
             <element signature="e#222#231#0" expanded="true" />
           </folding>
