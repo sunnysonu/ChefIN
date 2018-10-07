@@ -1,1 +1,1 @@
-web: gunicorn insta.wsgi --log-file -
+web: gunicorn chefin.wsgi --log-file -
