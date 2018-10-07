@@ -25,7 +25,7 @@ SECRET_KEY = 'e_mdr5)s^7^7e(2lr$%i$7qb%4xygcmhb@lonxwmc4ul9or6ar'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".chefin.com"]
+ALLOWED_HOSTS = [".heroku.com"]
 
 
 # Application definition
