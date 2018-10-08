@@ -43,5 +43,5 @@ class ChefProfileSignupSerializer(serializers.ModelSerializer):
         return profile
 
     class Meta:
-        models = ChefProfile
+        model = ChefProfile
         fields = "__all__"
