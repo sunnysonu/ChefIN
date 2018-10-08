@@ -22,7 +22,6 @@ from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
 urlpatterns = [
     url(r"^auth/token/refresh/", refresh_jwt_token),
     url(r"^auth/token/", obtain_jwt_token),
-    path('admin/', admin.site.urls),
     path('chefin/', include("app.urls")),
     url(r'^admin/', admin.site.urls),
 ]
