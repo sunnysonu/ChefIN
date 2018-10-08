@@ -12,8 +12,12 @@ class UserProfile(models.Model):
 
 class ChefProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    dishes = models.TextField()
     username = models.CharField(max_length=20)
+    dishes = ListCharField(
+        base_field=models.CharField(max_length=100),
+        size=10,
+        max_length = ((10 + 1) * 100)
+    )
 
     class Meta:
         unique_together = ("username", )
@@ -29,3 +33,4 @@ class EventRequests(models.Model):
         size=10,
         max_length = ((10 + 1) * 100)
     )
+    time = models.DateTimeField(auto_now_add=True)
