@@ -33,4 +33,4 @@ class EventRequests(models.Model):
         size=10,
         max_length = ((10 + 1) * 100)
     )
-    time = models.DateTimeField(auto_now_add=True)
+    time = models.DateTimeField(auto_now_add=True, default = None, null=True)
