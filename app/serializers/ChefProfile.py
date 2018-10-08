@@ -12,7 +12,7 @@ class ChefProfileSerializer(serializers.ModelSerializer):
         user_data = validated_data.pop("user")
         instance.user.first_name = user_data.get("fist_name", instance.user.first_name)
         instance.user.last_name = user_data.get("last_name", instance.user.last_name)
-        instance.user.username = user_data.get("username", instance.user.username)
+        instance.user.username = instance.username
         new_password = user_data.get("password")
         if(new_password):
             instance.user.set_password(new_password)
