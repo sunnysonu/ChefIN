@@ -7,7 +7,7 @@ from rest_framework import status
 from rest_framework.response import Response
 
 class UserProfileSignup(APIView):
-    # permission_classes = (AllowAny,)
+    permission_classes = (AllowAny,)
 
     def post(self, request, format = None):
         serializer = UserProfileSignupSerializer(data = request.data)
@@ -23,7 +23,7 @@ class UserProfileSignup(APIView):
 
 
 class ChefProfileSignup(APIView):
-    # permission_classes = (AllowAny,)
+    permission_classes = (AllowAny,)
 
     def post(self, request, format=None):
         serializer = ChefProfileSignupSerializer(data=request.data)
