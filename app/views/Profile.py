@@ -5,6 +5,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
+from rest_framework.generics import *
 
 class UserProfileSignup(APIView):
     permission_classes = (AllowAny,)
@@ -21,6 +22,9 @@ class UserProfileSignup(APIView):
         serializer = ProfileSerializer(users, many=True)
         return Response(serializer.data)
 
+class UserDetailProfile(RetrieveAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = ProfileSerializer
 
 class ChefProfileSignup(APIView):
     permission_classes = (AllowAny,)
@@ -36,3 +40,7 @@ class ChefProfileSignup(APIView):
         users = ChefProfile.objects.all()
         serializer = ChefProfileSerializer(users, many=True)
         return Response(serializer.data)
+
+class ChefDetailProfile(RetrieveAPIView):
+    queryset = ChefProfile.objects.all()
+    serializer_class = ChefProfileSerializer
