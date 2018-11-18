@@ -18,7 +18,7 @@ class UserProfileSignup(APIView):
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
 
     def get(self, request, format = None):
-        users = UserProfile.objects.all()
+        users = User.objects.all()
         serializer = ProfileSerializer(users, many=True)
         return Response(serializer.data)
 
@@ -37,7 +37,7 @@ class ChefProfileSignup(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request, format=None):
-        users = ChefProfile.objects.all()
+        users = User.objects.all()
         serializer = ChefProfileSerializer(users, many=True)
         return Response(serializer.data)
 
