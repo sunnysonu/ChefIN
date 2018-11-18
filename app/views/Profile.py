@@ -22,7 +22,7 @@ class UserProfileSignup(APIView):
         serializer = ProfileSerializer(users, many=True)
         return Response(serializer.data)
 
-class UserDetailProfile(RetrieveAPIView):
+class UserDetailProfile(RetrieveUpdateDestroyAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = ProfileSerializer
 
@@ -41,6 +41,6 @@ class ChefProfileSignup(APIView):
         serializer = ChefProfileSerializer(users, many=True)
         return Response(serializer.data)
 
-class ChefDetailProfile(RetrieveAPIView):
+class ChefDetailProfile(RetrieveUpdateDestroyAPIView):
     queryset = ChefProfile.objects.all()
     serializer_class = ChefProfileSerializer
