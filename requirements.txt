@@ -16,7 +16,7 @@ django-filter==1.1.0
 django-multiforloop==0.2.1
 django-mysql==2.4.1
 django-webpack-loader==0.6.0
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 djangorestframework-simplejwt==3.2.3
 et-xmlfile==1.0.1
